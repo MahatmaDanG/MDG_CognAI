@@ -94,6 +94,7 @@ class Plain_RNNNet(nn.Module):
         super().__init__()
 
         # Leaky RNN
+        self.input_size = input_size
         self.rnn = LeakyRNN(input_size, hidden_size, **kwargs)
 
         # Add a Linear output layer
